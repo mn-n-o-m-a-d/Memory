@@ -1,0 +1,21 @@
+table {
+width: 100%;
+box-sizing: border-box;
+}
+
+td {
+  border: 1px solid #333;
+ height: 20vh;
+ text-align: center;
+ font-size: 400%;
+ background-size: contain;
+ background-position: center;
+ background-repeat: no-repeat;
+ width: 25%;
+}
+
+thead,
+tfoot {
+  background-color: #333;
+  color: #fff;
+}

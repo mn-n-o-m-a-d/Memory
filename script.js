@@ -37,9 +37,9 @@ document.querySelectorAll("tbody td").forEach((td, index) => {
 
                     flippedCards = [];
                     canFlip = true;
-                     // Überprüfen, ob alle Paare übereinstimmen
+                     // Check if all pairs match
                      if (document.querySelectorAll(".flipped").length === field.length) {
-                        // Alle Karten sind umgedreht, Spiel beendet
+                        // All cards have been flipped, the game is finished
                         showCongratulationsMessage();
                     }
                 }, 1500); // Adjust the delay time (in milliseconds) as needed

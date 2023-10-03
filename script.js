@@ -28,9 +28,6 @@ function restartGame() {
     overlay.classList.add('hidden');
 }
 
-
-
-
 document.querySelectorAll("tbody td").forEach((td, index) => {
     td.addEventListener("click", function () {
         if (!canFlip || flippedCards.length >= 2) return;
@@ -83,8 +80,6 @@ document.querySelectorAll("tbody td").forEach((td, index) => {
         overlay.classList.remove('hidden');
         const message = overlay.querySelector('.message');
         message.textContent = "Congratulations! You've matched all pairs.";
-
-
         const resetButton = overlay.querySelector('.reset');
         resetButton.classList.remove('hidden')
 

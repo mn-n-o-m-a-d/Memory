@@ -23,6 +23,9 @@ function restartGame() {
 
     flippedCards = [];
     canFlip = true;
+
+    const overlay = document.querySelector('.overlay');
+    overlay.classList.add('hidden');
 }
 
 
@@ -77,11 +80,16 @@ document.querySelectorAll("tbody td").forEach((td, index) => {
     function showCongratulationsMessage() {
         alert("Congratulations! You've matched all pairs.");
         const overlay = document.querySelector('.overlay');
-    overlay.classList.remove('hidden');
+        overlay.classList.remove('hidden');
+        const message = overlay.querySelector('.message');
+        message.textContent = "Congratulations! You've matched all pairs.";
+
+
+        const resetButton = overlay.querySelector('.reset');
+        resetButton.classList.remove('hidden')
+
         }
 
-        const resetButton = document.querySelector('.reset'); 
+       
 
-        resetButton.addEventListener('click', function() {
-            restartGame();
-        });
+

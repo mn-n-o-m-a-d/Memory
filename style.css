@@ -23,6 +23,8 @@ table {
     backface-visibility: hidden;
     transform-style: preserve-3d;
     transition: transform 0.5s;
+    max-width: 100%;
+    max-height: 100%;
   }
   
   .memory-card .card-front,
@@ -51,7 +53,7 @@ table {
    text-align: center;
    font-size: 400%;
    background-image: url("back.png");
-   background-size: cover;
+   background-size: contain;
    background-position: center;
    background-repeat: no-repeat;
    width: 100px;

@@ -4,6 +4,30 @@ const field = [4, 1, 2, 0, 3, 5, 1, 0, 3, 4, 2, 5];
 let flippedCards = [];
 let canFlip = true;
 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+function restartGame() {
+    shuffleArray(field);
+    shuffleArray(pictures);
+
+    document.querySelectorAll("tbody td").forEach((td, index) => {
+        td.classList.remove('flipped');
+        td.style.backgroundImage = "";
+        td.style.color = "";
+    });
+
+    flippedCards = [];
+    canFlip = true;
+}
+
+
+
+
 document.querySelectorAll("tbody td").forEach((td, index) => {
     td.addEventListener("click", function () {
         if (!canFlip || flippedCards.length >= 2) return;
@@ -55,3 +79,9 @@ document.querySelectorAll("tbody td").forEach((td, index) => {
         const overlay = document.querySelector('.overlay');
     overlay.classList.remove('hidden');
         }
+
+        const resetButton = document.querySelector('.reset'); 
+
+        resetButton.addEventListener('click', function() {
+            restartGame();
+        });

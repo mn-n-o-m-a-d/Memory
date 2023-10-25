@@ -66,7 +66,7 @@ document.querySelectorAll("tbody td").forEach((td, index) => {
                         // All cards have been flipped, the game is finished
                         showCongratulationsMessage();
                     }
-                }, 1500); // Adjust the delay time (in milliseconds) as needed
+                }, 1500); // delay time (in milliseconds)
             }
         }
     });
@@ -83,8 +83,5 @@ document.querySelectorAll("tbody td").forEach((td, index) => {
         const resetButton = overlay.querySelector('.reset');
         resetButton.classList.remove('hidden')
 
-        }
-
-       
-
+    }
 
